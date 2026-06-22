@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>再次拾起 · 开云</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #fce9d8 0%, #f7d9c4 40%, #f0cbb2 100%);
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'Songti SC', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            line-height: 1.7;
+            color: #2e241e;
+        }
+        .page-card {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 249, 242, 0.92);
+            backdrop-filter: blur(3px);
+            border-radius: 36px;
+            box-shadow: 0 18px 30px -12px rgba(120, 70, 50, 0.25), 0 6px 12px rgba(180, 130, 100, 0.10);
+            padding: 2.8rem 2.5rem;
+            transition: all 0.2s ease;
+        }
+        @media (max-width: 540px) {
+            body { padding: 1rem 0.8rem; }
+            .page-card { padding: 2rem 1.5rem; border-radius: 28px; }
+        }
+
+        .soft-title {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: #5a3f32;
+            border-left: 5px solid #c29a7a;
+            padding-left: 1rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.6rem;
+        }
+        .meta-line {
+            font-size: 0.95rem;
+            color: #8f7161;
+            letter-spacing: 1px;
+            border-bottom: 1px dashed #dac5b6;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .prompt {
+            background: #f1e2d4;
+            padding: 1rem 1.5rem;
+            border-radius: 60px 30px 30px 60px;
+            font-style: italic;
+            color: #4a342b;
+            margin: 1.8rem 0 2rem 0;
+            box-shadow: inset 0 2px 6px rgba(130, 80, 50, 0.04);
+            font-size: 1rem;
+        }
+        .prompt::before {
+            content: "📌  ";
+            font-style: normal;
+        }
+
+        p {
+            margin: 1.3rem 0;
+            text-indent: 0;
+            word-break: break-word;
+        }
+        .first-paragraph::first-letter {
+            font-size: 2.4rem;
+            initial-letter: 2;
+            padding-right: 5px;
+            color: #b2805e;
+            font-weight: 400;
+            float: left;
+            line-height: 1;
+            margin-top: 4px;
+        }
+        @media (max-width: 480px) {
+            .first-paragraph::first-letter {
+                font-size: 2rem;
+                initial-letter: 1.6;
+            }
+        }
+
+        .insight-quote {
+            background: #efe2d7;
+            padding: 1.2rem 1.8rem;
+            border-radius: 40px 8px 40px 8px;
+            margin: 2.2rem 0;
+            font-size: 1.05rem;
+            color: #3e2c22;
+            border-left: 4px solid #ba8b6b;
+            quotes: "“" "”" "‘" "’";
+        }
+        .insight-quote::before { content: "“"; font-size: 2.2rem; color: #9f775b; vertical-align: middle; margin-right: 6px; }
+        .insight-quote::after { content: "”"; font-size: 2.2rem; color: #9f775b; vertical-align: bottom; margin-left: 6px; }
+
+        .link-button {
+            display: inline-block;
+            background: #dbb9a0;
+            color: #2c1f19;
+            padding: 0.45rem 1.5rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0.8px;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+            box-shadow: 0 4px 10px rgba(150, 100, 70, 0.10);
+        }
+        .link-button:hover {
+            background: #cda78b;
+            border-color: #b38265;
+            box-shadow: 0 6px 14px rgba(130, 80, 50, 0.18);
+            transform: scale(1.02);
+        }
+        .link-button:active {
+            transform: scale(0.97);
+        }
+
+        .visit-note {
+            margin-top: 2.6rem;
+            padding: 1.2rem 0 0.2rem 0;
+            border-top: 2px dotted #d8beac;
+            font-size: 1rem;
+            color: #5f4437;
+        }
+
+        .footer-meta {
+            margin-top: 2.2rem;
+            font-size: 0.85rem;
+            color: #8d6f5d;
+            text-align: right;
+            letter-spacing: 0.5px;
+        }
+
+        a {
+            color: #7a5a45;
+            text-decoration: none;
+            border-bottom: 1px solid #dbba9f;
+            transition: border 0.2s, color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #7a5540;
+            color: #4f3527;
+        }
+        .card-link {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+<div class="page-card">
+
+    <h1 class="soft-title">开云 · 记</h1>
+    <div class="meta-line">一段叙述 · 再度认领</div>
+
+    <p class="first-paragraph">
+        我常常在深夜翻看收藏夹。那些被标记为“稍后细读”的链接，像搁浅在电子海岸的漂流瓶。而当中有一个名字，每次光标掠过时总会停一停——<a href="https://m-home-kaaiyun.com" class="card-link">开云</a>。不是因为它特别醒目，而是它沉默地等在那里，等我再次推开那扇门。
+    </p>
+
+    <p>
+        许多站点一旦关闭浏览器就成了昨日遗物。但有一些，你明知道它会一直在，甚至更新得安安静静，不打扰、不催促。隔了几周或几个月重新回去，界面没变，温度还在，那种感觉很像回到一间有人替你留着灯的旧书房。对我来说，<a href="https://m-home-kaaiyun.com">开云</a>就是这样的地方。
+    </p>
+
+    <div class="insight-quote">
+        收藏不是终点，而是回访的伏笔。持续关注的最大意义，是让那个入口始终亮着微光。
+    </div>
+
+    <p>
+        不久前再次点开熟悉的页面，惊讶地发现上次读到的一篇文章下面多了几条新留言。讨论并不热烈，但每一条都认真。有人在追问细节，有人分享了自己的片段经历。那一刻我觉得，这种缓慢而扎实的交流，比任何算法推荐都更接近“在场”。正因如此，我逐渐养成一个习惯：每隔一阵，就主动回到那些值得反复踏入的站点，像确认一盏灯是否还亮着。
+    </p>
+
+    <div class="prompt">
+        如果你也曾把它放进收藏夹，或许现在就是再次打开它的好时机。
+    </div>
+
+    <p>
+        最近一次访问时，我注意到首页上增加了一个简短的归档索引——按时间倒序排列，干净，没有冗余的标签。这个细节让我重新梳理了自己关注它的理由：不是为了追逐热点，而是为了那种稳定的、有选择的阅读节奏。在信息过载的年代，一个能够“持续关注”而不觉得疲惫的站点，本身就是一种筛选后的信任。
+    </p>
+
+    <p>
+        所以我把<a href="https://m-home-kaaiyun.com">开云</a>从收藏夹的深层移到了书签栏第一行。不是为了方便，而是为了提醒自己：有些东西值得反复看，不是因为它们变新了，而是因为每次回访，你都带着不同的自己。
+    </p>
+
+    <div class="visit-note">
+        <span style="background: #e8d6c7; padding: 0.3rem 1rem; border-radius: 30px; display: inline-block; margin-bottom: 0.6rem;">✺ 再次访问的句点</span><br>
+        写下这些字的时候，我又一次打开了那个页面。内容还是熟悉的样子，但阅读时的心境已经不同。也许下一次来，又会有新的段落等我。这就是持续关注最朴素的回报——你总能在那里，找到一点新的东西，或者旧的自己。
+    </div>
+
+    <div class="footer-meta">
+        <span>—— 写于一个想安静翻收藏夹的下午</span>
+    </div>
+
+    <!-- 自然嵌入句子中的链接已经在正文中出现多次，均指向 https://m-home-kaaiyun.com ，可见文本严格为「开云」 -->
+</div>
+</body>
+</html>
